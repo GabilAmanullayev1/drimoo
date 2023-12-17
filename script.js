@@ -1,23 +1,49 @@
-let url = 'http://localhost:3000/api';
+// axios.get('http://localhost:3000/services')
+//   .then(response => {
+//     // Yanıtı işle
+//     const data = response.data;
+//     console.log(data);
+//   })
+//   .catch(error => {
+//     console.error('GET request error:', error);
+//   });
+document.addEventListener('DOMContentLoaded',()=>{
+    axios.get('http://localhost:3000/services')
+    .then(response => {
+      const data = response.data;
 
-function getAllFetch() {
-    fetch(url)
-        .then(res => res.json())
-        .then(data => console.log(data))
+      const servicesContainer = document.querySelector('.service');
+  
+      data.forEach(service => {
+        const serviceBox = document.createElement('div');
+        serviceBox.className = 'service-box';
+  
+        const img = document.createElement('img');
+        img.src = service.icon;
+        img.alt = service.title;
+  
+        const h2 = document.createElement('h2');
+        h2.textContent = service.title;
+  
+        const p = document.createElement('p');
+        p.textContent = service.description;
 
-}
-function getByIdFetch(id) {
-    fetch(url + id)
-        .then(res => res.json())
-        .then(data => console.log(data))
-}
-function getAllAxios() {
-    axios.get(url)
-        .then(res => console.log(res.data))
-}
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = 'delete-btn';
+        deleteBtn.textContent = 'Delete';
 
-function getByIDAxios(id) {
-    axios.get(url +"/"+id)
-        .then(res => console.log(res.data))
-}
-getByIDAxios(6)
+        deleteBtn.addEventListener('click', () => {
+            servicesContainer.removeChild(serviceBox);
+        });
+        
+        serviceBox.appendChild(img);
+        serviceBox.appendChild(h2);
+        serviceBox.appendChild(p);
+        serviceBox.appendChild(deleteBtn)
+  
+        servicesContainer.appendChild(serviceBox);
+      });
+    })
+    .catch(error => console.error('Error fetching or processing data:', error));
+    
+})

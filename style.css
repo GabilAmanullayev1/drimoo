@@ -18,32 +18,26 @@ nav {
   background-color: white;
   width: 100%;
 }
-
 nav #nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 100px;
 }
-
 nav #nav .nav-ul {
   display: flex;
   gap: 20px;
 }
-
 nav #nav .nav-ul li {
   padding: 35px 5px;
 }
-
 nav #nav .nav-ul li a {
   text-decoration: none;
   color: #424242;
 }
-
 nav #nav .nav-ul li:last-child a {
   color: #7db9e8;
 }
-
 nav #nav .nav-ul li:hover a {
   color: #7db9e8;
   transition: color 0.4s ease;
@@ -55,28 +49,22 @@ nav #nav .nav-ul li:hover a {
   background-attachment: fixed;
   background-image: url(images/server-banner.jpg.webp);
 }
-
 #banner .banner {
   display: flex;
   gap: 50px;
 }
-
 #banner .banner .banner-image {
   max-width: 50%;
 }
-
 #banner .banner .banner-image img {
   max-width: 100%;
 }
-
 #banner .banner .banner-text {
   width: 100%;
 }
-
 #banner .banner .banner-text .span {
   position: relative;
 }
-
 #banner .banner .banner-text .span::before {
   content: "Special Offer Now $10 ";
   color: #fff;
@@ -89,7 +77,6 @@ nav #nav .nav-ul li:hover a {
   top: -108px;
   font-size: 26px;
 }
-
 #banner .banner .banner-text .span::after {
   content: "";
   position: absolute;
@@ -101,14 +88,12 @@ nav #nav .nav-ul li:hover a {
   left: 580px;
   top: -46px;
 }
-
 #banner .banner .banner-text h1 {
   font-size: 50px;
   color: #fff;
   width: 100%;
   position: relative;
 }
-
 #banner .banner .banner-text h2 {
   font-size: 36px;
   color: #fff;
@@ -117,7 +102,6 @@ nav #nav .nav-ul li:hover a {
   letter-spacing: 0.72px;
   font-weight: 300;
 }
-
 #banner .banner .banner-text p {
   font-size: 16px;
   line-height: 28px;
@@ -126,7 +110,6 @@ nav #nav .nav-ul li:hover a {
   letter-spacing: 0.32px;
   padding-bottom: 25px;
 }
-
 #banner .banner .banner-text .banner-ul {
   display: flex;
   flex-wrap: wrap;
@@ -134,16 +117,13 @@ nav #nav .nav-ul li:hover a {
   gap: 20px;
   padding: 25px 0px 50px 0px;
 }
-
 #banner .banner .banner-text li {
   color: #fff;
   width: 40%;
 }
-
 #banner .banner .banner-text li i {
   margin-right: 20px;
 }
-
 #banner .banner .banner-text #banner-btn {
   color: #fff;
   background: #e64100;
@@ -157,20 +137,52 @@ nav #nav .nav-ul li:hover a {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
 #service h1 {
+  position: relative;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 50px;
 }
-
+#service h1::before {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: #424242;
+  position: absolute;
+  bottom: -20px;
+  right: 47%;
+}
 #service #p {
   text-align: center;
   width: 60%;
   margin: 0 auto;
 }
-
 #service .service {
   display: grid;
-  gap: 10px;
+  gap: 30px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-} /*# sourceMappingURL=style.css.map */
+}
+#service .service .service-box {
+  padding-top: 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+#service .service .service-box h2 {
+  padding: 25px 0px 18px;
+  font-weight: 400;
+  color: #424242;
+  font-size: 20px;
+}
+#service .service .service-box p {
+  font-size: 14px;
+  color: #424242;
+  line-height: 1.5;
+  padding: 15px 0px 10px;
+}
+#service .service .service-box .delete-btn {
+  width: 50%;
+  padding: 5px;
+  background-color: #e64100;
+  border-radius: 10px;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
