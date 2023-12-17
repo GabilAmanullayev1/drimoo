@@ -1,0 +1,52 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "icon": "images/ss-icon-1.png.webp",
+      "title": "Cloud Hosting",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+    },
+    {
+      "id": 2,
+      "icon": "images/ss-icon-2.png.webp",
+      "title": "Web Hosting",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+    },
+    {
+      "id": 3,
+      "icon": "images/ss-icon-3.png.webp",
+      "title": "Cloud Hosting",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+    },
+    {
+      "id": 4,
+      "icon": "images/ss-icon-4.png.webp",
+      "title": "Share Hosting",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+    },
+    {
+      "id": 5,
+      "icon": "images/ss-icon-1.png.webp",
+      "title": "VPS Server",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+    },
+    {
+      "id": 6,
+      "icon": "images/ss-icon-2.png.webp",
+      "title": "Cloud Hosting",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+    },
+    {
+      "id": 7,
+      "icon": "images/ss-icon-3.png.webp",
+      "title": "Web Hosting",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+    },
+    {
+      "id": 8,
+      "icon": "images/ss-icon-4.png.webp",
+      "title": "Share Hosting",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+    }
+  ]
+}
