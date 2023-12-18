@@ -53,6 +53,10 @@ nav {
                 }
             }
         }
+
+        .nav-menu {
+            display: none;
+        }
     }
 }
 
@@ -232,8 +236,8 @@ nav {
 }
 
 #client {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     background: #7db9e8;
 
     h1 {
@@ -314,11 +318,17 @@ nav {
             right: 47%;
         }
     }
+    p{
+        padding-bottom: 50px;
+        width: 80%;
+        text-align: center;
+        margin:  0 auto;
+    }
 
     .latest {
         display: flex;
         gap: 30px;
-        .latest-box{
+        .latest-box {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -326,15 +336,18 @@ nav {
             align-items: center;
             border: 1px solid gray;
             padding-bottom: 50px;
-            .latest-text{
-                width: 80%; 
-                h2{
+
+            .latest-text {
+                width: 80%;
+
+                h2 {
                     font-size: 20px;
                     font-weight: 400;
                     color: #424242;
                     padding-bottom: 20px;
-                } 
-                p{
+                }
+
+                p {
                     color: #424242;
                     font-size: 14px;
                 }
@@ -344,15 +357,142 @@ nav {
 
     }
 }
-#footer{
-    border-top: 1px solid gray;
+
+#footer {
+    border-top: 1px solid #6b6d6f;
     padding-top: 50px;
     padding-bottom: 50px;
-    .footer{
+
+    .footer {
         text-align: center;
-        h4{
+
+        p {
             color: #6b6d6f;
             font-size: 16px;
         }
     }
+}
+@media screen and (max-width:992px) {
+  .container {
+        padding: 0px 32px;
+        margin: 0 auto;
+    }
+    nav{
+        #nav{
+            .nav-ul{
+                display: none;
+            }
+            .nav-menu{
+                display: block;
+                font-size: 28px;
+                padding: 10px;
+                color: #6b6d6f;
+                cursor: pointer;
+            }
+        }
+    }
+    #banner{
+        .banner{
+            flex-direction: column;
+            align-items: center;
+            .banner-text{
+                width: 100%;
+            .span {
+                position: relative;
+
+                &::before {
+                    content: "Special Offer Now $10 ";
+                    color: #fff;
+                    background: #fc6428;
+                    position: absolute;
+                    padding: 15px 0;
+                    text-align: center;
+                    width: 400px;
+                    left: 100px;
+                    top: -200px;
+                    font-size: 26px;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-left: 25px solid transparent;
+                    border-right: 25px solid transparent;
+                    border-top: 50px solid #fc6428;
+                    ;
+                    left: 280px;
+                    top: -140px;
+                }
+            }
+                h1{
+                    font-size: 30px;
+                }
+                h2{
+                    font-size: 20px;
+                }
+                p{
+                    width: 100%;
+                }
+            }
+            .banner-image{
+                max-width: 80%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    #service{
+        #p{
+            width: 80%;
+        }
+        .service{
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            width: 100%;
+            .service-box{
+                width: 45%;
+                text-align: left;
+            }
+            
+        }
+    }
+    #client{
+        .client{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .client-box{
+                width: 100%;
+                &:nth-child(n+4) {
+                    display: none;
+                }
+            }
+        }
+    }
+    #latest{
+        .latest{
+           flex-direction: column;
+           align-items: center;
+          .latest-box{
+            width: 80%;
+            img{
+                width: 100%;
+            }
+            .latest-text{
+                width: 95%;
+                h2{
+                    width: 100%;
+                }
+                p{
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+          }
+        }
+    }
+    
 }

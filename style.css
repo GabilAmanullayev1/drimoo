@@ -42,6 +42,9 @@ nav #nav .nav-ul li:hover a {
   color: #7db9e8;
   transition: color 0.4s ease;
 }
+nav #nav .nav-menu {
+  display: none;
+}
 
 #banner {
   padding-top: 300px;
@@ -192,8 +195,8 @@ nav #nav .nav-ul li:hover a {
 }
 
 #client {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background: #7db9e8;
 }
 #client h1 {
@@ -265,6 +268,12 @@ nav #nav .nav-ul li:hover a {
   bottom: -20px;
   right: 47%;
 }
+#latest p {
+  padding-bottom: 50px;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
 #latest .latest {
   display: flex;
   gap: 30px;
@@ -293,14 +302,122 @@ nav #nav .nav-ul li:hover a {
 }
 
 #footer {
-  border-top: 1px solid gray;
+  border-top: 1px solid #6b6d6f;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 #footer .footer {
   text-align: center;
 }
-#footer .footer h4 {
+#footer .footer p {
   color: #6b6d6f;
   font-size: 16px;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 0px 32px;
+    margin: 0 auto;
+  }
+  nav #nav .nav-ul {
+    display: none;
+  }
+  nav #nav .nav-menu {
+    display: block;
+    font-size: 28px;
+    padding: 10px;
+    color: #6b6d6f;
+    cursor: pointer;
+  }
+  #banner .banner {
+    flex-direction: column;
+    align-items: center;
+  }
+  #banner .banner .banner-text {
+    width: 100%;
+  }
+  #banner .banner .banner-text .span {
+    position: relative;
+  }
+  #banner .banner .banner-text .span::before {
+    content: "Special Offer Now $10 ";
+    color: #fff;
+    background: #fc6428;
+    position: absolute;
+    padding: 15px 0;
+    text-align: center;
+    width: 400px;
+    left: 100px;
+    top: -200px;
+    font-size: 26px;
+  }
+  #banner .banner .banner-text .span::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid #fc6428;
+    left: 280px;
+    top: -140px;
+  }
+  #banner .banner .banner-text h1 {
+    font-size: 30px;
+  }
+  #banner .banner .banner-text h2 {
+    font-size: 20px;
+  }
+  #banner .banner .banner-text p {
+    width: 100%;
+  }
+  #banner .banner .banner-image {
+    max-width: 80%;
+  }
+  #banner .banner .banner-image img {
+    width: 100%;
+  }
+  #service #p {
+    width: 80%;
+  }
+  #service .service {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: 100%;
+  }
+  #service .service .service-box {
+    width: 45%;
+    text-align: left;
+  }
+  #client .client {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #client .client .client-box {
+    width: 100%;
+  }
+  #client .client .client-box:nth-child(n+4) {
+    display: none;
+  }
+  #latest .latest {
+    flex-direction: column;
+    align-items: center;
+  }
+  #latest .latest .latest-box {
+    width: 80%;
+  }
+  #latest .latest .latest-box img {
+    width: 100%;
+  }
+  #latest .latest .latest-box .latest-text {
+    width: 95%;
+  }
+  #latest .latest .latest-box .latest-text h2 {
+    width: 100%;
+  }
+  #latest .latest .latest-box .latest-text p {
+    width: 100%;
+    text-align: left;
+  }
 }/*# sourceMappingURL=style.css.map */
