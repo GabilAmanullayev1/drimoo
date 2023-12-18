@@ -140,6 +140,8 @@ nav #nav .nav-ul li:hover a {
 #service h1 {
   position: relative;
   margin: 0 auto;
+  font-size: 35px;
+  font-weight: 400;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -185,4 +187,120 @@ nav #nav .nav-ul li:hover a {
   background-color: #e64100;
   border-radius: 10px;
   cursor: pointer;
+  border: none;
+  color: #fff;
+}
+
+#client {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #7db9e8;
+}
+#client h1 {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+#client h1::before {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: -20px;
+  right: 47%;
+}
+#client #p2 {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+#client .client {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+#client .client .client-box {
+  display: flex;
+  gap: 20px;
+}
+#client .client .client-box .client-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 5px solid gray;
+}
+#client .client .client-box .client-icon i {
+  font-size: 30px;
+  margin: 0 auto;
+  color: #7db9e8;
+  text-align: center;
+}
+
+#latest {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#latest h1 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 50px;
+}
+#latest h1::before {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: #424242;
+  position: absolute;
+  bottom: -20px;
+  right: 47%;
+}
+#latest .latest {
+  display: flex;
+  gap: 30px;
+}
+#latest .latest .latest-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  padding-bottom: 50px;
+}
+#latest .latest .latest-box .latest-text {
+  width: 80%;
+}
+#latest .latest .latest-box .latest-text h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #424242;
+  padding-bottom: 20px;
+}
+#latest .latest .latest-box .latest-text p {
+  color: #424242;
+  font-size: 14px;
+}
+
+#footer {
+  border-top: 1px solid gray;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#footer .footer {
+  text-align: center;
+}
+#footer .footer h4 {
+  color: #6b6d6f;
+  font-size: 16px;
 }/*# sourceMappingURL=style.css.map */

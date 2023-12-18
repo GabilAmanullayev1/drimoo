@@ -172,6 +172,8 @@ nav {
     h1 {
         position: relative;
         margin: 0 auto;
+        font-size: 35px;
+        font-weight: 400;
         text-align: center;
         margin-bottom: 50px;
 
@@ -208,19 +210,149 @@ nav {
                 color: $main_black;
                 font-size: 20px;
             }
-            p{
+
+            p {
                 font-size: 14px;
                 color: $main_black;
                 line-height: 1.5;
                 padding: 15px 0px 10px;
             }
-            .delete-btn{
+
+            .delete-btn {
                 width: 50%;
                 padding: 5px;
                 background-color: #e64100;
                 border-radius: 10px;
                 cursor: pointer;
+                border: none;
+                color: #fff;
             }
+        }
+    }
+}
+
+#client {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #7db9e8;
+
+    h1 {
+        color: #fff;
+        position: relative;
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 50px;
+        font-weight: 400;
+
+        &::before {
+            content: "";
+            width: 60px;
+            height: 2px;
+            background: #fff;
+            position: absolute;
+            bottom: -20px;
+            right: 47%;
+        }
+    }
+
+    #p2 {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        color: #fff;
+    }
+
+    .client {
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+
+        .client-box {
+            display: flex;
+            gap: 20px;
+
+            .client-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+                background-color: #fff;
+                border-radius: 50%;
+                border: 5px solid gray;
+
+                i {
+                    font-size: 30px;
+                    margin: 0 auto;
+                    color: #7db9e8;
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+}
+
+#latest {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    h1 {
+        text-align: center;
+        font-size: 35px;
+        font-weight: 400;
+        position: relative;
+        margin-bottom: 50px;
+
+        &::before {
+            content: "";
+            width: 60px;
+            height: 2px;
+            background: $main-black;
+            position: absolute;
+            bottom: -20px;
+            right: 47%;
+        }
+    }
+
+    .latest {
+        display: flex;
+        gap: 30px;
+        .latest-box{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid gray;
+            padding-bottom: 50px;
+            .latest-text{
+                width: 80%; 
+                h2{
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: #424242;
+                    padding-bottom: 20px;
+                } 
+                p{
+                    color: #424242;
+                    font-size: 14px;
+                }
+            }
+
+        }
+
+    }
+}
+#footer{
+    border-top: 1px solid gray;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .footer{
+        text-align: center;
+        h4{
+            color: #6b6d6f;
+            font-size: 16px;
         }
     }
 }
