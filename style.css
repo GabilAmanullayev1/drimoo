@@ -163,34 +163,55 @@ nav #nav .nav-menu {
   margin: 0 auto;
 }
 #service .service {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+#service .service .loadBtn {
+  background-color: #e64100;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  min-width: 100px;
+  width: 20%;
+}
+#service .service .sec2-boxs {
+  padding-top: 50px;
   display: grid;
   gap: 30px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-#service .service .service-box {
+#service .service .sec2-boxs .sec2-box {
   padding-top: 50px;
   margin: 0 auto;
   text-align: center;
 }
-#service .service .service-box h2 {
+#service .service .sec2-boxs .sec2-box h2 {
   padding: 25px 0px 18px;
   font-weight: 400;
   color: #424242;
   font-size: 20px;
 }
-#service .service .service-box p {
+#service .service .sec2-boxs .sec2-box p {
   font-size: 14px;
   color: #424242;
   line-height: 1.5;
   padding: 15px 0px 10px;
 }
-#service .service .service-box .delete-btn {
-  width: 50%;
+#service .service .sec2-boxs .sec2-box .sec2-box-btn {
   padding: 5px;
   background-color: #e64100;
   border-radius: 10px;
   cursor: pointer;
   border: none;
+  color: #fff;
+}
+#service .service .sec2-boxs .sec2-box .sec2-box-btn a {
+  text-decoration: none;
   color: #fff;
 }
 
@@ -417,12 +438,12 @@ nav #nav .nav-menu {
   #service #p {
     width: 80%;
   }
-  #service .service {
+  #service .service .sec2-boxs {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     width: 100%;
   }
-  #service .service .service-box {
+  #service .service .sec2-boxs .service-box {
     width: 45%;
     text-align: left;
   }
@@ -515,12 +536,12 @@ nav #nav .nav-menu {
     width: 100%;
     font-size: 14px;
   }
-  #service .service {
+  #service .service .sec2-boxs {
     max-width: 100%;
     grid-template-columns: 1fr;
     width: 100%;
   }
-  #service .service .service-box {
+  #service .service .sec2-boxs .service-box {
     width: 80%;
   }
   #client #p2 {
