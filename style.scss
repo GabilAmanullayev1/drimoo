@@ -225,6 +225,7 @@ nav {
             .sec2-box {
                 padding-top: 50px;
                 margin: 0 auto;
+                width: 100%;
                 text-align: center;
 
                 h2 {
@@ -234,7 +235,7 @@ nav {
                     font-size: 20px;
                 }
 
-                p { 
+                p {
                     font-size: 14px;
                     color: $main_black;
                     line-height: 1.5;
@@ -248,7 +249,8 @@ nav {
                     cursor: pointer;
                     border: none;
                     color: #fff;
-                    a{
+
+                    a {
                         text-decoration: none;
                         color: #fff;
                     }
@@ -540,7 +542,7 @@ nav {
                 gap: 30px;
                 width: 100%;
 
-                .service-box {
+                .sec2-box {
                     width: 45%;
                     text-align: left;
                 }
@@ -674,7 +676,7 @@ nav {
                 grid-template-columns: 1fr;
                 width: 100%;
 
-                .service-box {
+                .sec2-box {
                     width: 80%;
                 }
             }
