@@ -10,7 +10,7 @@ function getDataJson() {
       data.forEach(element => {
         sec2Boxs.innerHTML += `
         <div class="sec2-box">
-        <i onclick="addFavorite(${element.id})" class="bi bi-balloon-heart-fill"></i>
+        <i onclick="addFavorite(${element.id})" class="fa-regular fa-heart"></i>
         <img src="${element.icon}" alt="Image">
         <div class="sec2-box-p1">${element.title}</div>
         <div class="sec2-box-p2">${element.description}</div>
@@ -38,6 +38,7 @@ function addFavorite(id) {
   axios.get("http://localhost:3000/services/" + id)
     .then(res => {
       axios.post("http://localhost:3000/favorites", res.data)
+      
     })
 }
 let toggleNav = () => {

@@ -1,33 +1,51 @@
-document.addEventListener('DOMContentLoaded', function () {
-    let addForm = document.querySelector('.category-form');
+document.addEventListener('DOMContentLoaded', () => {
+    const addForm = document.getElementById('addForm');
+    const imageInput = document.getElementById('imageInput');
+    const nameInput = document.getElementById('name');
+    const categoryInput = document.getElementById('category');
+    const submitBtn = document.getElementById('submit');
+    const modalImage = document.querySelector('.modalImage');
 
-    addForm.addEventListener('submit', function (event) {
-        event.preventDefault();
+    submitBtn.addEventListener('click', () => {
+        const file = imageInput.files[0]; // Get the selected file
 
-        // Get form data
-        let image = document.getElementById('image').files[0];
-        let name = document.getElementById('name').value;
-        let category = document.getElementById('category').value;
+        if (file) {
+            const reader = new FileReader();
 
-        // Create a FormData object to handle file upload
-        let formData = new FormData();
-        formData.append('image', image);
-        formData.append('name', name);
-        formData.append('category', category);
+            reader.onload = (e) => {
+                const imageSrc = e.target.result; // Get the base64 data URI
+                modalImage.src = imageSrc; // Set the source of the img tag
 
-        // Send a POST request to add a new item
-        axios.post('http://localhost:3000/services', formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        })
-        .then(response => {
-            // Handle successful addition, e.g., redirect or display a success message
-            console.log('Item added successfully:', response.data);
-        })
-        .catch(error => {
-            // Handle errors, e.g., display an error message
-            console.error('Error adding item:', error);
-        });
+                const name = nameInput.value;
+                const category = categoryInput.value;
+
+                const newElement = {
+                    icon: imageSrc,
+                    title: name,
+                    description: category,
+                };
+
+                fetch('http://localhost:3000/services', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(newElement),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Element added:', data);
+                    window.location.href = 'index.html';
+                })
+                .catch(error => {
+                    console.error('Error adding element:', error);
+                });
+            };
+
+            reader.readAsDataURL(file); // Read the contents of the file as a data URL
+        } else {
+            // Handle the case when no file is selected
+            console.error('No file selected.');
+        }
     });
 });

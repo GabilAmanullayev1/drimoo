@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Add Element</title>
+   <style>
+    #addForm{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        width: 100px;
+    }
+   </style>
 </head>
 <body>
-    <section id="add">
-        <form class="category-form">
-            <label for="category-name">Image:</label>
-            <input type="file" id="image" name="category-name" required>
-            <label for="category-name">Name:</label>
-            <input type="text" id="name" name="category-name" required>
+
+    <section id="add1">
+        <form class="category-form" id="addForm">
+            <div class="imgCont">
+                <img class="modalImage" src="" alt="">
+                <input accept="image" type="file" id="imageInput">
+            </div>
+            <input class="name" type="text" id="name" name="category-name" required>
             <label for="category-name">Category:</label>
-            <input type="text" id="category" name="category-name" required>
-            <input type="submit" value="Submit" id="submit">
-          </form>
+            <input class="category" type="text" id="category" name="category-name" required>
+            <input class="submit" type="button" value="Submit" id="submit">
+        </form>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Include your scripts at the end of the body or use defer/async attributes -->
     <script src="add.js"></script>
 </body>
 </html>

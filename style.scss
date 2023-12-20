@@ -216,6 +216,20 @@ nav {
             width: 20%;
         }
 
+        .a1 {
+            text-align: center;
+            text-decoration: none;
+            background-color: #e64100;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            min-width: 100px;
+            width: 20%;
+        }
+
         .sec2-boxs {
             padding-top: 50px;
             display: grid;
@@ -227,6 +241,19 @@ nav {
                 margin: 0 auto;
                 width: 100%;
                 text-align: center;
+                position: relative;
+
+                i {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 18px;
+                    color: #7db9e8;
+
+                    &:active {
+                        color: red;
+                    }
+                }
 
                 h2 {
                     padding: 25px 0px 18px;
@@ -242,19 +269,26 @@ nav {
                     padding: 15px 0px 10px;
                 }
 
-                .sec2-box-btn {
-                    padding: 5px;
-                    background-color: #e64100;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    border: none;
-                    color: #fff;
+                .sec2-box-btns {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
 
-                    a {
-                        text-decoration: none;
+                    .sec2-box-btn {
+                        padding: 5px;
+                        background-color: #e64100;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        border: none;
                         color: #fff;
+
+                        a {
+                            text-decoration: none;
+                            color: #fff;
+                        }
                     }
                 }
+
             }
         }
     }
@@ -697,6 +731,23 @@ nav {
                     display: none;
                 }
             }
+        }
+    }
+
+}
+@media screen and (max-width:468px) {
+    #client {
+        #p2 {
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .client {
+           flex-direction: column;
+           gap: 10px;
+           .client-box{
+            width: 100%;
+           }
         }
     }
 
